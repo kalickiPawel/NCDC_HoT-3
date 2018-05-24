@@ -16,8 +16,8 @@ public class Rownoleglobok {
 			
 		if (width>0 && width<=100 && height>0 && height<=100 && kick<=100 && kick>=-100)
 		{
-			int kickMinus=kick*-1;
-			int shiftMinus = height*kickMinus;
+			int kickInv=kick*-1;
+			int shiftMax = height*kickInv;
 					
 			for (int j=0; j<height; j++)
 			{
@@ -28,7 +28,7 @@ public class Rownoleglobok {
 				}
 				else 
 				{
-					for (int m=shiftMinus-kickMinus; m>0; m--)
+					for (int m=shiftMax-kickInv; m>0; m--)
 						System.out.print(" ");
 				}
 					
@@ -40,7 +40,7 @@ public class Rownoleglobok {
 				if(kick>=0)
 					shift += kick;
 				else
-					shiftMinus -= kickMinus;
+					shiftMax -= kickInv;
 			}
 		}
 	}
