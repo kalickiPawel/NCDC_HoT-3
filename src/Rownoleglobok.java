@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Rownoleglobok {
+public class Rownoleglobok 
+{
 
 	public static void main (String[] args) 
 	{
