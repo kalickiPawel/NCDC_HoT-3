@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.regex.*;
 
 public class Rownoleglobok 
 {
@@ -12,13 +13,40 @@ public class Rownoleglobok
 		
 		if(tokens.length==3)
 		{
-			int shift=0;
-			int width = Integer.parseInt(tokens[0]);
-			int height = Integer.parseInt(tokens[1]);
-			int kick = Integer.parseInt(tokens[2]);
+			if(((tokens[0].length()==1 && tokens[0].charAt(0)>47 && tokens[0].charAt(0)<58) ||
+				(tokens[0].length()==2 && tokens[0].charAt(0)>47 && tokens[0].charAt(0)<58 &&
+				tokens[0].charAt(1)>47 && tokens[0].charAt(1)<58) ||
+				(tokens[0].length()==3 && tokens[0].charAt(0)=='1' &&
+				tokens[0].charAt(1)=='0' && tokens[0].charAt(2)=='0')) &&
 				
-			if (width>0 && width<=100 && height>0 && height<=100 && kick<=100 && kick>=-100)
+				((tokens[1].length()==1 && tokens[1].charAt(0)>47 && tokens[1].charAt(0)<58) ||
+				(tokens[1].length()==2 && tokens[1].charAt(0)>47 && tokens[1].charAt(0)<58 &&
+				tokens[1].charAt(1)>47 && tokens[1].charAt(1)<58) ||
+				(tokens[1].length()==3 && tokens[1].charAt(0)=='1' &&
+				tokens[1].charAt(1)=='0' && tokens[1].charAt(2)=='0')) &&
+				
+				(((tokens[2].length()==1 && tokens[2].charAt(0)>47 && tokens[2].charAt(0)<58) ||
+				(tokens[2].length()==2 && tokens[2].charAt(0)>47 && tokens[2].charAt(0)<58 &&
+				tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58) ||
+				(tokens[2].length()==3 && tokens[2].charAt(0)=='1' &&
+				tokens[2].charAt(1)=='0' && tokens[2].charAt(2)=='0')) ||
+						
+				((tokens[2].length()==2 && tokens[2].charAt(0)=='-' &&
+				tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58) ||
+				(tokens[2].length()==2 && tokens[2].charAt(0)=='-' &&
+				tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58) &&
+				tokens[2].charAt(2)>47 && tokens[2].charAt(2)<58) ||		
+				(tokens[2].length()==4 && tokens[2].charAt(0)=='-' &&
+				tokens[2].charAt(1)=='1' && tokens[2].charAt(2)=='0' && 
+				tokens[2].charAt(3)=='0'))
+			  )
 			{
+				int shift=0;
+				
+				int width = Integer.parseInt(tokens[0]);
+				int height = Integer.parseInt(tokens[1]);
+				int kick = Integer.parseInt(tokens[2]);
+				
 				int kickInv=kick*-1;
 				int shiftMax = height*kickInv;
 						
