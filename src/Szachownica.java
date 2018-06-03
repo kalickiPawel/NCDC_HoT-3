@@ -39,29 +39,46 @@ public class Szachownica
 				char whiteSign = tokens[4].charAt(0);
 				char blackSign = tokens[5].charAt(0);
 				
+				boolean changeHorizSign = true;
+				boolean changeVertSign = true;
+				
 				for(int i=0; i<vertical; i++)
 				{
-					for(int l=0; l<height; l++) 
+					for(int l=1; l<=height; l++)
 					{
+						changeVertSign = true;
 						for(int j=0; j<horizontal; j++)
 						{
-							if((i+j)%width==0)
+							for(int k=1; k<=width; k++)
 							{
-									for(int k=0; k<width; k++)
+								if(changeVertSign == true)
+								{
+									if(changeHorizSign == true)
 									{
 										System.out.print(whiteSign);
 									}
-							}
-							else
-							{
-									for(int k=0; k<width; k++)
+									else
 									{
 										System.out.print(blackSign);
 									}
+								}
+								if(changeVertSign == false)
+								{
+									if(changeHorizSign == true)
+									{
+										System.out.print(blackSign);
+									}
+									else
+									{
+										System.out.print(whiteSign);
+									}
+								}
 							}
+							changeVertSign = !changeVertSign;
 						}
 						System.out.println();
 					}
+					changeHorizSign = !changeHorizSign;
 				}
 			}			
 		}
