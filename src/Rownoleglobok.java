@@ -15,20 +15,20 @@ public class Rownoleglobok
 			if(
 				(
 				  (tokens[0].length()==1 && tokens[0].charAt(0)>47 && tokens[0].charAt(0)<58) ||
-				  (tokens[0].length()==2 && tokens[0].charAt(0)>47 && tokens[0].charAt(0)<58 && tokens[0].charAt(1)>47 && tokens[0].charAt(1)<58) ||
+				  (tokens[0].length()==2 && tokens[0].charAt(0)>48 && tokens[0].charAt(0)<58 && tokens[0].charAt(1)>47 && tokens[0].charAt(1)<58) ||
 				  (tokens[0].length()==3 && tokens[0].charAt(0)=='1' && tokens[0].charAt(1)=='0' && tokens[0].charAt(2)=='0')
 				) && (
 				  (tokens[1].length()==1 && tokens[1].charAt(0)>47 && tokens[1].charAt(0)<58) ||
-				  (tokens[1].length()==2 && tokens[1].charAt(0)>47 && tokens[1].charAt(0)<58 && tokens[1].charAt(1)>47 && tokens[1].charAt(1)<58) ||
+				  (tokens[1].length()==2 && tokens[1].charAt(0)>48 && tokens[1].charAt(0)<58 && tokens[1].charAt(1)>47 && tokens[1].charAt(1)<58) ||
 				  (tokens[1].length()==3 && tokens[1].charAt(0)=='1' && tokens[1].charAt(1)=='0' && tokens[1].charAt(2)=='0')
 				) && (
 				  (
 				    (tokens[2].length()==1 && tokens[2].charAt(0)>47 && tokens[2].charAt(0)<58) ||
-				    (tokens[2].length()==2 && tokens[2].charAt(0)>47 && tokens[2].charAt(0)<58 && tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58) ||
+				    (tokens[2].length()==2 && tokens[2].charAt(0)>48 && tokens[2].charAt(0)<58 && tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58) ||
 				    (tokens[2].length()==3 && tokens[2].charAt(0)=='1' && tokens[2].charAt(1)=='0' && tokens[2].charAt(2)=='0')
 				  ) || (
 				    (tokens[2].length()==2 && tokens[2].charAt(0)=='-' && tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58) ||
-				    (tokens[2].length()==3 && tokens[2].charAt(0)=='-' && tokens[2].charAt(1)>47 && tokens[2].charAt(1)<58 && tokens[2].charAt(2)>47 && tokens[2].charAt(2)<58) ||		
+				    (tokens[2].length()==3 && tokens[2].charAt(0)=='-' && tokens[2].charAt(1)>48 && tokens[2].charAt(1)<58 && tokens[2].charAt(2)>47 && tokens[2].charAt(2)<58) ||		
 				    (tokens[2].length()==4 && tokens[2].charAt(0)=='-' && tokens[2].charAt(1)=='1' && tokens[2].charAt(2)=='0' && tokens[2].charAt(3)=='0')
 				  )
 				)
