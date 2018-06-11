@@ -21,8 +21,52 @@ public class Kosmolot {
 				) 
 			  )
 			{
-				System.out.println(tokens[0]);
-				System.out.println(tokens[1]);
+				int limit = Integer.parseInt(tokens[0]);
+				
+				switch(tokens[1].charAt(0))
+				{
+					case 'Y':
+						for(int i=0; i<(2*limit-1); i++)  // rows
+						{
+							for(int j=0; j<limit; j++) // repeat
+							{
+								for(int k=0; k<limit; k++) // columns
+								{
+									if(((k<=i) && (i<=(2*limit-1)/2)) || ((limit-1-k>=i-(2*limit-1)/2) && (i>(2*limit-1)/2)))
+										
+										if((j==0 && k==0) || (j==limit-1 && k==limit-1)) 
+											System.out.print(">");
+										else if(k==i && i!=(2*limit-1)/2)
+											System.out.print('\\');
+										else if((limit-1-k==i-(2*limit-1)/2) && (i>(2*limit-1)/2))
+											System.out.print('/');
+										else
+											System.out.print("*");
+
+									else
+										System.out.print(" ");
+								}
+							}
+							System.out.println();
+						}
+						break;
+					case 'N':
+						for(int i=0; i<(2*limit-1); i++)  // rows
+						{
+							for(int j=0; j<limit; j++) // repeat
+							{
+								for(int k=0; k<limit; k++) // columns
+								{
+									if(((k<=i) && (i<=(2*limit-1)/2)) || ((limit-1-k>=i-(2*limit-1)/2) && (i>(2*limit-1)/2)))
+										System.out.print("*");
+									else
+										System.out.print(" ");
+								}
+							}
+							System.out.println();
+						}
+						break;
+				}	
 			}
 		}
 	}
