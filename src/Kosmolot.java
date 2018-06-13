@@ -1,13 +1,15 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Kosmolot {
-	
+public class Kosmolot 
+{
 	public static void main (String[] args) 
 	{
-		Scanner input = new Scanner(System.in);
-		String data = input.nextLine();
-		String delims = "[ ]+";
-		String[] tokens = data.split(delims);
+		// Scanner input = new Scanner(System.in);
+		// String data = input.nextLine();
+		// String delims = "[ ]+";
+		// String[] tokens = data.split(delims);
+
+		String[] tokens = args;
 		
 		if(tokens.length==2)
 		{
